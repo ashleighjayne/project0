@@ -1,0 +1,31 @@
+// --------------------------------------------------------------------------
+// Styleguide Styles - Icons
+// --------------------------------------------------------------------------
+
+
+.icon {
+    max-width: 50px;
+
+    &-list {
+        padding: 10px 25px;
+        background: rgba(0, 0, 0, .2);
+        border-radius: 10px;
+
+        .styleguide__module {
+            width: 20%;
+            max-height: 85px;
+            min-height: 75px;
+        }
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 1.5rem;
+        width: 100%;
+        margin: 10px 10px 15px;
+    }
+
+    &__details {
+        margin-left: 15px;
+    }
+}

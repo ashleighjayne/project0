@@ -1,0 +1,12 @@
+// --------------------------------------------------------------------------
+// Recaptcha
+// --------------------------------------------------------------------------
+
+
+@media (max-width: 400px) {
+    .g-recaptcha {
+        transform: scale(.8) translate(-38px, 0);
+        -ms-transform: scale(.8) translate(-38px, 0);
+        -webkit-transform: scale(.8) translate(-38px, 0);
+    }
+}

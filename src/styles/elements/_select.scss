@@ -1,0 +1,47 @@
+// --------------------------------------------------------------------------
+// Select
+// --------------------------------------------------------------------------
+
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.custom-select__container {
+    position: relative;
+    background: $athens-grey;
+    padding: 15px 0;
+}
+
+.custom-select__label {
+    margin: 5px 0 0 20px;
+    display: block;
+    float: none;
+    line-height: 1;
+}
+
+.ios {
+    .custom-select__container {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: 15px;
+            width: 16px;
+            height: 10px;
+            background-color: $athens-grey;
+            background-image: url(../../images/sprite/sprite.png);
+            background-repeat: no-repeat;
+            background-position: -56px -1px;
+            display: inline-block;
+            text-indent: -999999px;
+            font-size: 1px;
+        }
+    }
+
+    select.form-control {
+        width: 80%;
+        padding-left: 20px;
+    }
+}

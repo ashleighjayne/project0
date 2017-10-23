@@ -1,0 +1,53 @@
+// --------------------------------------------------------------------------
+// Placeholders
+// --------------------------------------------------------------------------
+
+
+// Polyfills
+// --------------------------------------------------------------------------
+
+%clearfix {
+    &::before,
+    &::after {
+        content: '';
+        display: table;
+        line-height: 0;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+
+// Visibilty
+// --------------------------------------------------------------------------
+
+%hidden {
+    left: -999em;
+    position: absolute;
+}
+
+%visible {
+    left: 0;
+    position: static;
+}
+
+%hide-text {
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: 0;
+    color: transparent;
+    display: block;
+    font: 0/0 a;
+    text-shadow: none;
+}
+
+
+// Styles
+// --------------------------------------------------------------------------
+
+%basic-box {
+    padding: 12px 0;
+}

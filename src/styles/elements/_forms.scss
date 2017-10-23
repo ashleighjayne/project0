@@ -1,0 +1,234 @@
+// --------------------------------------------------------------------------
+// Forms
+// --------------------------------------------------------------------------
+
+
+$troubleshooter-highlight: $btn-primary-bg;
+
+form.dark {
+    .form__error-box {
+        background: rgba(230, 91, 6, .1);
+        border: solid 2px $trinidad;
+
+        p {
+            color: $trinidad;
+        }
+    }
+}
+
+.form__success-box,
+.form__info-box,
+.form__error-box {
+    background-color: rgba(198, 79, 5, .1);
+    border: solid 2px $red-stage;
+    padding: 51px 15px 15px 15px;
+    position: relative;
+    margin-bottom: $grid-gutter-width;
+
+    .sprite,
+    svg {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: $red-stage;
+        font-weight: 500;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        padding: 15px 15px 15px 56px;
+    }
+}
+
+.form__success-box {
+    background-color: rgba(121, 206, 109, .1);
+    border-color: $mountain-meadow;
+
+    p {
+        color: $mountain-meadow;
+    }
+}
+
+.form__info-box {
+    background: $athens-grey;
+    border: 0;
+
+    p {
+        margin-bottom: 10px;
+        font-size: 15px;
+        color: $kimberly;
+        font-weight: 400;
+    }
+}
+
+.radio__group {
+    border: none;
+    padding: 0;
+}
+
+.help-block {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    &::before {
+        content: none;
+    }
+}
+
+#query-field {
+    min-height: 200px;
+}
+
+label {
+    font-weight: 500;
+    text-transform: initial;
+    font-size: 17px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.natural-language {
+    &__headline--select {
+        line-height: 1;
+        align-items: center;
+        position: relative;
+
+        @media (max-width: $screen-sm-min) {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        @media (min-width: $screen-sm-min) {
+            display: flex;
+            flex-wrap: wrap;
+
+            > span {
+                padding-right: 10px;
+            }
+        }
+
+        &::before {
+            top: -15px;
+            position: absolute;
+        }
+
+        .chosen-container {
+            width: auto;
+            position: relative;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            padding-right: 10px;
+
+            .chosen-single {
+                > span {
+                    color: $troubleshooter-highlight;
+                    border-bottom: 1px dotted $troubleshooter-highlight;
+                }
+            }
+
+            .chosen-single > div {
+                top: 0;
+                margin-top: -5px;
+                right: 0;
+            }
+        }
+    }
+
+    .chosen-single > span {
+        line-height: 1;
+    }
+
+    .chosen-container {
+        font-size: inherit;
+    }
+
+    &__select {
+        -webkit-appearance: none;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+        color: $troubleshooter-highlight;
+        border-bottom: 1px dotted $troubleshooter-highlight;
+        background-color: transparent;
+    }
+}
+
+//custom css for iphone/ipad
+.ios .natural-language__select-wrapper {
+    display: inline-block;
+    position: relative;
+    padding-right: 16px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 16px;
+        height: 10px;
+        background-image: url(../../images/sprite/sprite.png);
+        background-repeat: no-repeat;
+        background-position: -56px -1px;
+    }
+}
+
+.form-group--full {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: $form-group-margin-bottom;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group.has-error .field-validation-icon--error {
+        top: 52px;
+    }
+
+    .form-group.has-success .field-validation-icon--success {
+        top: 52px;
+    }
+
+    .from-group-wrapper {
+        position: relative;
+    }
+}
+
+.form-group,
+.form-group--full {
+    //these have a from-group-wrapper around the field - neccessary if there's helpcopy above the field
+    &.has-error .from-group-wrapper .field-validation-icon--error {
+        top: 20px;
+    }
+
+    &.has-success .from-group-wrapper .field-validation-icon--success {
+        top: 20px;
+    }
+}
+
+.has-error {
+    color: $red-stage;
+
+    .help-block {
+        color: currentColor;
+
+        span {
+            display: inline-block;
+            margin-top: 10px;
+        }
+    }
+}
+
+.form-control::-webkit-input-placeholder { color: $pigeon-post; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: $pigeon-post; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: $pigeon-post; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: $pigeon-post; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: $pigeon-post; }  /* Microsoft Edge */

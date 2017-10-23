@@ -1,0 +1,120 @@
+// --------------------------------------------------------------------------
+// File Upload
+// --------------------------------------------------------------------------
+
+
+.file-upload {
+    &__info {
+        font-size: 14px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__container {
+        position: relative;
+        margin: 0;
+        border: 2px dashed $input-border;
+        padding: .5em 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        @media (min-width: $screen-sm-min) {
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+
+    &__button {
+        margin-top: 0;
+        min-width: 130px;
+        padding: 5px;
+        padding-left: 20px;
+        position: relative;
+
+        @media (min-width: $screen-sm-min) {
+            margin-left: 30px;
+        }
+
+        &:hover {
+            background: $body-bg;
+            color: $btn-secondary-color;
+        }
+
+        &::before {
+            content: '';
+            background-image: url(../../images/icons/add-blue.svg);
+            width: 11px;
+            height: 11px;
+            background-size: contain;
+            display: inline-block;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &--remove {
+            color: $btn-danger-secondary;
+
+            &::before {
+                background-image: url(../../images/icons/close-red.svg);
+            }
+
+            &:hover {
+                color: $btn-danger-secondary;
+            }
+        }
+    }
+
+    &__info {
+        flex: 1;
+
+        @media (max-width: $screen-sm-min) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__size {
+        font-weight: 500;
+    }
+
+    .has-error {
+        border-radius: 2px;
+        border: solid 2px;
+        color: $state-danger-border;
+        padding: 2em 3em 2em 2em;
+        display: none;
+        font-size: 14px;
+
+        p {
+            margin: 0 0 0;
+        }
+
+        .field-validation-icon.field-validation-icon--error {
+            left: auto;
+            top: 2em;
+            right: 20px;
+        }
+    }
+}
+
+.file-uploaded {
+    &__container {
+        padding: .5em 1em;
+        border: 2px solid $input-border;
+        margin-bottom: 8px;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        @media (min-width: $screen-sm-min) {
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+}

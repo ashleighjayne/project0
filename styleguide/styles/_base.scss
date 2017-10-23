@@ -1,0 +1,96 @@
+// --------------------------------------------------------------------------
+// Styleguide Styles - Base
+// --------------------------------------------------------------------------
+
+
+body {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    background-color: #eee;
+    border-radius: .2rem;
+    color: #555;
+    display: inline-block;
+    padding: 0 .25rem;
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover,
+    &:active {
+        background-color: #424297;
+        color: #fff;
+    }
+}
+
+p + p {
+    margin-top: .5rem;
+}
+
+.styleguide {
+    box-sizing: border-box;
+    margin: 2rem auto;
+    max-width: 65rem;
+    padding: 1rem;
+
+    &__header {
+        &::after {
+            content: '';
+            clear: both;
+            visibility: hidden;
+            display: block;
+            height: 0;
+        }
+
+        .styleguide__title {
+            margin: 3rem;
+            display: inline-block;
+            font-weight: 500;
+            color: #555;
+        }
+    }
+
+    &__nav {
+        .styleguide__title {
+            margin: 2rem 3rem;
+            display: inline-block;
+            font-weight: 300;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        float: left;
+        height: 100px;
+        margin: 1rem;
+        width: 100px;
+    }
+
+
+    &__title {
+        font-size: 1.8rem;
+        text-align: center;
+        display: inline-block;
+    }
+
+    &__abstract {
+        margin: 0 3rem 2rem;
+    }
+
+    &__link {
+        &:hover {
+            .module__description {
+                color: #fff;
+            }
+        }
+    }
+
+    &__footer {
+        color: #999;
+        font-size: .9rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}

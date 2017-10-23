@@ -1,0 +1,138 @@
+// --------------------------------------------------------------------------
+// Styleguide Styles - Colours
+// --------------------------------------------------------------------------
+
+
+.colour {
+    &-list {
+        .styleguide__module {
+            width: 25%;
+        }
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 1.5rem;
+        width: 100%;
+        margin: 10px 0 15px;
+    }
+
+    &__details {
+        margin-left: 20px;
+        padding-top: 25px;
+    }
+
+
+    &__palette {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 100px;
+
+        &.gray-darker {
+            background: $gray-darker;
+        }
+
+        &.gray-dark {
+            background: $gray-dark;
+        }
+
+        &.gray {
+            background: $gray;
+        }
+
+        &.gray-light {
+            background: $gray-light;
+        }
+
+        &.gray-lighter {
+            background: $gray-lighter;
+        }
+
+        &.trinidad {
+            background: $trinidad;
+        }
+
+        &.red-stage {
+            background: $red-stage;
+        }
+
+        &.red {
+            background: $red;
+        }
+
+        &.blue {
+            background: $blue;
+        }
+
+        &.picton-blue {
+            background: $picton-blue;
+        }
+
+        &.mountain-meadow {
+            background: $mountain-meadow;
+        }
+
+        &.lime {
+            background: $lime;
+        }
+
+        &.athens-grey {
+            background: $athens-grey;
+        }
+
+        &.snuff {
+            background: $snuff;
+        }
+
+        &.pigeon-post {
+            background: $pigeon-post;
+        }
+
+        &.kimberly {
+            background: $kimberly;
+        }
+
+        &.deep-cove {
+            background: $deep-cove;
+        }
+
+        &.wild-sand {
+            background: $wild-sand;
+        }
+
+        &.mercury {
+            background: $mercury;
+        }
+
+        &.alto {
+            background: $alto;
+        }
+
+        &.silver {
+            background: $silver;
+        }
+
+        // &.brand-primary {
+        //     background: $brand-primary;
+        // }
+
+        // &.brand-success {
+        //     background: $brand-success;
+        // }
+
+        // &.brand-info {
+        //     background: $brand-info;
+        // }
+
+        // &.brand-warning {
+        //     background: $brand-warning;
+        // }
+
+        // &.brand-danger {
+        //     background: $brand-danger;
+        // }
+    }
+}
+
+

@@ -1,0 +1,53 @@
+{
+    "name": "prscorebrandstyles",
+    "version": "1.0.0",
+    "description": "Core Brand Styleguide for PRS",
+    "main": "index.js",
+    "license": "ISC",
+    "author": {
+        "name": "Zone",
+        "url": "https://zonedigital.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://prsvso.visualstudio.com/DefaultCollection/aa-Shared/_git/PRSCoreBrandStyles"
+    },
+    "scripts": {
+        "watch": "webpack-dev-server",
+        "build": "webpack --progress --hide-modules",
+        "production": "NODE_ENV=production webpack --progress --hide-modules -p",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "bootstrap-sass": "^3.3.7",
+        "bootstrap": "3",
+        "browser-sync": "^2.18.8",
+        "browser-sync-webpack-plugin": "^1.2.0",
+        "jquery-validation": "jquery.validate#^1.13.0",
+        "responsive-toolkit": "responsive-toolkit#^2.6.3"
+    },
+    "dependencies": {
+        "@zonedigital/eslint-config-zone": "^0.0.4",
+        "@zonedigital/stylelint-config-zone": "^0.0.5",
+        "autoprefixer": "^7.1.1",
+        "babel-core": "^6.10.4",
+        "babel-eslint": "^7.1.1",
+        "babel-loader": "^7.0.0",
+        "babel-preset-env": "^1.5.2",
+        "circular-dependency-plugin": "^3.0.0",
+        "clean-webpack-plugin": "^0.1.15",
+        "css-loader": "^0.28.0",
+        "eslint": "^4.0.0",
+        "eslint-loader": "^1.3.0",
+        "extract-text-webpack-plugin": "^2.0.0",
+        "node-sass": "^4.5.0",
+        "postcss-loader": "^2.0.6",
+        "sass-loader": "^6.0.0",
+        "style-loader": "^0.18.2",
+        "stylelint-webpack-plugin": "^0.7.0",
+        "webpack": "^2.2.1",
+        "webpack-dev-server": "^2.4.1",
+        "webpack-manifest-plugin": "^1.1.0",
+        "webpack-merge": "^4.1.0"
+    }
+}

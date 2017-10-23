@@ -1,0 +1,16 @@
+// --------------------------------------------------------------------------
+// Border-box Grid
+// --------------------------------------------------------------------------
+
+
+@mixin col($i, $includeGutter: true) {
+    float: left;
+    width: percentage(($column-width * $i) / $container-width);
+
+    @if $includeGutter {
+        padding: 0 $gutter / 2;
+    }
+    @else {
+        padding: 0;
+    }
+}

@@ -1,0 +1,26 @@
+
+//Core Styles and Boostrap overrides
+@import 'core/_import';
+
+//// Bootstrap
+// Core variables and mixins
+@import 'libs/bootstrap/variables';
+@import 'libs/bootstrap/mixins';
+@import 'libs/bootstrap-overrides/mixins';
+
+//// Bootstrap
+// Reset and dependencies
+@import 'libs/bootstrap/normalize';
+
+//// Bootstrap
+// Core CSS
+@import 'libs/bootstrap-overrides/scaffolding';
+@import 'libs/bootstrap-overrides/type';
+@import 'libs/bootstrap/grid';
+@import 'libs/bootstrap-overrides/buttons';
+
+// Utilities
+@import 'utilities/_import';
+
+// Elements
+@import 'elements/_import';

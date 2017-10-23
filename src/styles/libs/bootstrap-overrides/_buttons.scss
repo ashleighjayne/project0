@@ -1,0 +1,300 @@
+// BUTTONS
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 2px solid transparent;
+  letter-spacing: 1.5px;
+  @include button-size(15px, 30px, 12px, 30px, 12px, $line-height-base, $btn-border-radius-base);
+  @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    background: $snuff;
+    border-color: $snuff;
+    color: $kimberly;
+    @include box-shadow(none);
+  }
+
+  // [converter] extracted a& to a.btn
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    background: $pigeon-post;
+    border-color: $pigeon-post;
+    color: $kimberly;
+  }
+}
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+
+  box-shadow: 0 5px 16px 0 rgba(25,73,213,0.30);
+  -ms-box-shadow: 0 5px 16px 0 rgba(25,73,213,0.30);
+  -webkit-box-shadow: 0 5px 16px 0 rgba(25,73,213,0.30);
+}
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+  &:hover {
+    border-color: $athens-grey;
+    background-color: $athens-grey;
+  }
+}
+// Success appears as green
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+// Pagintion button
+.btn-pagination {
+  @include button-variant($btn-pagination-color, $btn-pagination-bg, $btn-pagination-border);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+  padding: 18px 12px 16px 14px;
+
+  &:focus,
+  &:hover {
+    border-color: $pigeon-post;
+  }
+
+  &:active {
+    border-color: $kimberly;
+    background-color: $athens-grey;
+
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+  &.btn-pagination--active {
+    font-weight: 500;
+    border-color: $kimberly;
+    cursor: default;
+  }
+
+  &.btn-pagination--next,
+  &.btn-pagination--back {
+    color: $deep-cove;
+    position: relative;
+    padding: 18px 47px 16px 20px;
+    float: right;
+
+    svg {
+      position: absolute;
+      top: 14px;
+      right: 19px;
+
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+  }
+
+  &.btn-pagination--back {
+    padding: 18px 30px 16px 47px;
+    float: left;
+
+    svg {
+      right: auto;
+      left: 19px;
+
+      transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+    }
+  }
+
+  &.inactive {
+    background-color: white !important;
+    border-color: $snuff !important;
+    color: $pigeon-post !important;
+    cursor: default;
+
+    svg * {
+      fill: $pigeon-post !important
+    }
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  // Pagintion button
+  .btn-pagination {
+    &.btn-pagination--next {
+      padding: 18px 52px 16px 30px;
+    }
+    
+    &.btn-pagination--back {
+      padding: 18px 30px 16px 52px;
+    }
+  }
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: $link-color;
+  font-weight: normal;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size(15px, 30px, 12px, 30px, 14px, $line-height-base, $btn-border-radius-base);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size(15px, 30px, 12px, 30px, 14px, $line-height-base, $btn-border-radius-base);
+}
+.btn-xs {
+  @include button-size(15px, 30px, 12px, 30px, 14px, $line-height-base, $btn-border-radius-base);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+.btn--fix-bottom {
+  position: absolute;
+  bottom: 30px;
+}
+
+// Sidebar Buttons
+// --------------------------------------------------
+@media (min-width: $screen-sm-min) {
+  .side-bar {
+    .btn-primary {
+      @include button-variant($blue, white, $snuff);
+      border-width: 2px;
+      box-shadow: none;
+      -ms-box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+  }
+}
+
+

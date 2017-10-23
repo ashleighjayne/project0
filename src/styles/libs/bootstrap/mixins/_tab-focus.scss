@@ -1,0 +1,7 @@
+// WebKit-style focus
+
+@mixin tab-focus() {
+  outline: 2px solid rgb(94, 158, 214);
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}

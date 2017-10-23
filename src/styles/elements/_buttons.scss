@@ -1,0 +1,80 @@
+// --------------------------------------------------------------------------
+// Buttons
+// --------------------------------------------------------------------------
+
+
+[role='button'][rel='prev'],
+[role='button'][rel='next'] {
+    // Text
+    & .text {
+        // button controls styles
+    }
+}
+
+[role='button'] {
+    border: 0 none;
+    font-size: 14px;
+    padding: 8px;
+
+    & > .icon {
+        // icon styles here
+    }
+
+    & > .text {
+        // text styles
+    }
+
+    &:hover {
+        // hover styles
+        & > .icon {
+            // hover icon styles
+        }
+    }
+}
+
+.btn-cta {
+    @include hoverActiveFocus(background-color, $color-purple) {
+        background-color: $color-grey;
+    }
+}
+
+.btn--pill {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 21px;
+    text-transform: initial;
+    font-weight: initial;
+    text-align: left;
+    padding: 8px 18px;
+    font-size: 15px;
+    line-height: 18px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 17px;
+        padding: 12px 30px;
+        line-height: 1;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.pills--inline {
+    .radio {
+        display: inline-block;
+        border-top: none;
+
+        label {
+            padding: 0 0;
+        }
+    }
+}
+
+.step-completed .btn--pill {
+    opacity: .5;
+}
+
+input[type='radio'] {
+    &:checked + .btn--pill {
+        opacity: 1;
+    }
+}

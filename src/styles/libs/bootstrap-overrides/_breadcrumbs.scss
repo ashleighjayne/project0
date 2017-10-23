@@ -1,0 +1,56 @@
+// BREADCRUMBS
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  padding: 0;
+  margin-top: 18px;
+  margin-bottom: $grid-gutter-width * 0.5;
+  list-style: none;
+  float: left;
+  width: 100%;
+
+  > li {
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    padding-left: 21px;
+
+    &:first-child {
+      padding-left: 0px;
+    }
+
+    + li:before {
+      content: "";
+      height: 6px;
+      width: 6px;
+      background-color: $pigeon-post;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      bottom: 6px;
+    }
+  }
+
+  > .active {
+    color: $breadcrumb-active-color;
+    margin-right: 0px; 
+
+    &:before {
+      background-color: $red;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .breadcrumb {
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+
